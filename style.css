@@ -1,0 +1,236 @@
+@font-face {
+    font-family: 'proximanova-regular';
+    src: url('fonts/proximanova-regular-webfont.woff2') format('woff2'),
+         url('fonts/proximanova-regular-webfont.woff') format('woff');
+    font-style: normal;
+}
+
+
+
+body {
+    font-family: 'proximanova-regular';
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    position: relative;
+    width: 1420px;
+    height: 940px;
+    background-color: #F8F8FA;
+}
+
+.frame {
+    position: absolute;
+    width: 1110px;
+    height: 760px;
+    left: 155px;
+    top: 88px;
+}
+
+table {
+    width: 1110px;
+    /* position: absolute;
+    left: 0px;
+    top: 0px; */
+    border-spacing: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+thead {
+    position: static;
+    width: 1110px;
+    height: 38px;
+    text-align: left;
+    background: rgba(244, 245, 246, 0.4);
+    box-shadow: inset 0px -0.997297px 0px #eaedf3,
+                inset 0.997297px 0px 0px #eaedf3,
+                inset -0.997297 0px 0px #eaedf3,
+                inset 0px 0.997297px 0px #eaedf3;  
+} 
+
+th {
+    height: 38px;
+    padding: 10px 0 10px 13px;
+    background-color: rgba(244, 245, 246, 0.0001);
+    border: 1px solid #eaedf3;
+
+    font-family: 'proximanova-regular';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #3e3f42;
+}
+
+.table-active {
+    background-color: #eaedf3;
+    color: #2f80ed;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+
+/* Display Name thead */
+.display-name-header {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.display-name-header img {
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+}
+
+/* table body */
+tbody {
+    border: 1px solid #eaedf3;
+}
+
+tbody tr {
+    background-color: #fff;
+    box-shadow: inset 1px 0px 0px #eaedf3,
+                inset -1px 0px 0px #eaedf3,
+                inset 0px -1px 0px #eaedf3;
+    height: 56px;
+    width: 1110px;
+}
+
+tbody tr:hover {
+    background-color: #fafbfc;
+    /* background: linear-gradient(0deg, rgba(234, 237, 243, 0.25), 
+                                      rgba(234, 237, 243, 0.25), #fff);
+    box-shadow: inset 1px 0px 0px #eaedf3,
+                inset -1px 0px 0px #eaedf3,
+                inset 0px -1px 0px #eaedf3; */
+}
+
+tbody td {
+    height: 40px;
+    padding-left: 16px;
+
+    font-family: 'proximanova-regular';
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #646569;
+}
+
+small {
+    font-size: 13px;
+    line-height: 20px;
+    color: #9ea0a5;
+}
+
+
+/* Status Header */
+.status {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-left: 16px;
+}
+
+.status img {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+}
+
+
+.status span:not(:last-child):after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    left: 0;
+    top: 23px;
+    background-color: #27ae60;
+}
+
+.rectangle {
+    border-bottom: 1px solid #ced0da;
+}
+
+
+/* Options Dropdown Menu on hover */
+ul {
+    list-style-type: none;
+    position: relative;
+}
+a {
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 22px;
+    color: #202124; /* Shade 1 */
+}
+
+.dropdown {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.closed {
+    transform: rotateX(0deg);  
+}
+.menu {
+    position: absolute;
+    right: -5px;
+    top: 35px;
+    width: 156px;
+    height: 124px;
+    background-color: #fff;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    z-index: 9;
+}
+.menu li {
+    height: 40px;
+    padding: 9px 0 9px 13px;
+    position: relative;
+}
+
+
+.menu li:not(:last-child):after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: inset 0px -1px 0px #f0f2f5;    
+}
+
+.menu span {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    background-color: #f2c94c;
+    display: none;
+}
+
+.menu li:hover span {
+    display: block;
+}
+.dropdown.closed .menu { height: 0; } 
